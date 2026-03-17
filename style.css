@@ -1,0 +1,124 @@
+.task{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.taskText{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: maroon;
+}
+input{
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    .buttons input{
+        border-radius: 10px;
+    }
+}
+
+button{
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 40px;
+    height: 20px;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.delete-btn {
+    margin-left: auto;
+}
+
+.todolist {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+@media (max-width: 480px) {
+
+    li {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .delete-btn,
+    li button {
+        padding: 3px;
+    }
+
+    input[type="text"] {
+        min-width: 150px;
+    }
+}
+input[type="checkbox"]{
+    accent-color: #d39aeb;
+}
+.theme-btn{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: lightpink;
+    cursor: pointer;
+}
+/* LIGHT MODE */
+body.light-mode{
+    background-color: lightpink;
+}
+
+
+body.light-mode .theme-btn{
+    background-color: maroon;
+    color: lightpink;
+}
+body.light-mode input[type="checkbox"]{
+    accent-color: darkmagenta;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-8px); }
+    60% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.jump {
+    animation: jump 0.4s ease;
+}
+
+.task-date{
+    font-family: cursive;
+    color: limegreen;
+}
+
+.task-date.overdue{
+    color: red;
+    font-weight: bold;
+}
+.completed span,
+.completed .task-date {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+
+
+
+
+
